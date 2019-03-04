@@ -26,8 +26,13 @@ public class ch5_1 {
 		
 		System.out.println("Your first string is of size " + inputStringN.length());
 		System.out.println("Your second string is of size " + inputStringM.length());
-		System.out.println("Now enter the position in string N you would like to insert M: ");
+		System.out.print("Now enter the position in string N you would like to insert M: ");
 		MSBindex = scan.nextInt();
+		while(MSBindex >= inputStringN.length() || MSBindex < (inputStringM.length()-1)) {
+			System.out.println("That index is not valid!");
+			System.out.println("Enter a new position");
+		}
+			
 		LSBindex = MSBindex - (inputStringM.length() - 1);
 		
 		for(int i = 0; i < inputStringN.length(); i++) {
